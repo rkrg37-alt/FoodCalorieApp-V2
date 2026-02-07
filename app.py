@@ -10,7 +10,8 @@ api_key = os.environ.get("GEMINI_API_KEY", "PASTE_KEY_HERE_IF_LOCAL")
 genai.configure(api_key=api_key)
 
 # USING YOUR WORKING MODEL
-model = genai.GenerativeModel('gemini-flash-latest')
+#model = genai.GenerativeModel('gemini-flash-latest')
+model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 @app.route('/')
 def home():
@@ -63,3 +64,4 @@ def ask_calories():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
