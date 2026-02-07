@@ -11,7 +11,7 @@ api_key = os.environ.get("GEMINI_API_KEY", "PASTE_YOUR_KEY_HERE_FOR_LOCAL_TESTIN
 genai.configure(api_key=api_key)
 
 # We use the Flash model for speed
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-pro')
 
 @app.route('/')
 def home():
@@ -59,4 +59,5 @@ def ask_calories():
         })
 
 if __name__ == '__main__':
+
     app.run(debug=True)
